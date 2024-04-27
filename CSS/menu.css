@@ -1,0 +1,544 @@
+/*CSS Styling of the Menupage*/
+
+body {
+    margin: 0;
+    font-family: "Fjalla One", sans-serif;
+    padding:0;
+    background-color:#1B1C1D;
+}
+
+.header{
+    color: whitesmoke;
+    text-align: left;
+    box-shadow: 0px 0px 10px black;
+    text-shadow: 0px 5px 5px black;
+    position: relative;
+}
+.header img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px; 
+    height: auto;
+    padding:20px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+    padding: 20px;
+    background-color:#C8102E;
+}
+
+.navigation ul {
+    margin: 0;
+    text-align: left;
+    padding: 0;
+    background-color: #960C22;
+}
+
+.navigation ul li {
+    display: inline;
+    margin: 0;
+}
+
+.navigation ul li a {
+    font-size: 20px;
+    transition: color .5s;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 0;
+}
+
+.navigation ul li a:hover {
+    color: rgba(255, 255, 255, 0.664);
+}
+
+.navigation ul li.active a {
+    color: #f2c641;
+}
+
+h2{
+    font-size: 50px;
+    color: #e81313;
+    text-align:center;
+    text-shadow: 0px 5px 5px black;
+    margin-bottom:10px;
+}
+
+.title p{
+    text-align: center;
+    text-shadow: 0px 5px 5px black;
+    font-size:20px;
+    color:whitesmoke;
+    margin-top:10px;
+}
+
+.title{
+    background-image: url("../Images/wallpaper.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size:cover;
+    margin:0;
+    box-shadow: 0px 0px 10px black;
+    padding:50px;
+    
+}
+
+.container{
+    width:90%;
+    margin:50px auto;
+    text-align: center;
+    list-style:none;
+    box-sizing:border-box;
+    text-shadow: 0px 5px 5px black;
+    color:whitesmoke;
+
+}
+/* Food Tabs Styling*/
+.list{
+    display:flex;
+    justify-content:center;
+    margin-bottom:50px;
+}
+.list li {
+    margin: 0px 15px;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.5s;
+    text-shadow: 0px 0px 10px grey;
+}
+
+.list li:hover {
+    color: rgba(255, 255, 255, 0.664) !important; 
+}
+
+/*Food Menu Styling*/
+.content {
+    display: flex;
+    justify-content: flex-start; /* Align menu to the left */
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.box{
+    width:32%;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:whitesmoke;
+    animation: displayable 1s ease-in-out;
+}
+
+.box .image{
+    width: 35%;
+    margin-top:20px;
+}
+.box img{
+    width: 200px;
+    height:200px;
+    box-shadow: 0px 0px 10px red;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.box img:hover{
+    transform: scale(1.05);
+}
+.box .text{
+    width:60%;
+    text-align: left;
+    margin-left:55px;
+}
+.text section{
+    padding-top: 10px;
+    color:lightgreen;
+    font-size: 20px;
+    font-weight: 600;
+    font-style:italic;
+    text-shadow: 0 0 10px green;
+}
+.text h3{
+    font-size: 25px;
+    margin-bottom: 2px;
+    color:#C8102E;
+    text-shadow: 0px 0px 20px red;
+}
+.text hr{
+    border:none; 
+    height: 2px;
+    background-color: gray; 
+    margin: 10px;
+    width:200px; 
+    margin-left:0px;
+}
+.text article{
+    font-size: 15px;
+    color:#595857;
+    text-shadow: 0px 0px 10px black;
+}
+.fa-plus{
+    font-size:20px;
+    margin-left: 200px;
+    box-shadow:0px 0px 5px;
+    border-radius:50%;
+    padding:5px;
+    cursor:pointer;
+    transition:.6s ease-in-out;
+}
+.fa-plus:hover{
+    box-shadow:rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231,236,236) 0px 0px 0px 3px;
+    color: #f2c641; 
+    
+}
+@keyframes displayable{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+.quantity-input {
+    margin-top:10px;
+    width: 33px; /* Adjust the width as needed */
+    height: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f28a83;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align:center;
+}
+.quantity-input:focus {
+    outline: none;
+}
+
+/* Increase/decrease button style */
+.quantity-control {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #C8102E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-control:hover {
+    background-color: #8B0000;
+}
+
+.quantity-up, .quantity-down {
+    text-align: center;
+    color: black;
+    font-size: 16px; /* Adjust the font size as needed */
+    line-height: 30px; /* Adjust the line height to vertically center the text */
+}
+.quantity-control {
+    user-select: none;
+}
+
+/*Cart Sidebar*/
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    background-color: #C8102E;
+    box-shadow: 0 0 6px black;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 999;
+    visibility: hidden;
+    transition: right 0.3s ease-in-out, visibility 0s 0.3s; 
+}
+
+.sidebar.open {
+    right: 0;
+    visibility: visible;
+    transition: right 0.3s ease-in-out, visibility 0s 0s; 
+}
+.sidebar-close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    cursor: pointer;
+}
+.fas.fa-times {
+    color: #f28a83; 
+    transition: color 0.3s ease-in-out; 
+    cursor:pointer;
+    text-shadow: 0 0 5px black;
+}
+
+.fas.fa-times:hover {
+    color: lightgray; 
+}
+.cart-menu{
+    text-shadow: 0 0 5px black;
+    color:whitesmoke;
+}
+.cart-menu h3{
+    font-size:30px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px; /* Add margin at the bottom */
+    padding-right: 5px 0;
+}
+.cart-items{
+    display: flex;
+    flex-direction: column; 
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px black;
+    border: 1px solid #C8102E;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x:hidden;
+    width: calc(100% - 20px);
+    padding-right: 20px;
+}
+.cart-item-added {
+    animation: displayable 0.5s ease-in-out;
+}
+
+.cart-items::-webkit-scrollbar {
+    width: 10px;/
+}
+
+.cart-items::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+
+.cart-items::-webkit-scrollbar-thumb {
+    background: whitesmoke; 
+    border-radius: 5px; 
+}
+
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+    background: lightgrey; 
+}
+.cart-item-price{
+    color:lightgreen;
+    margin-left: 160px; 
+    padding-right: 10px;
+    flex: 1; 
+    text-align: right;
+}
+.sidebar-footer{
+    position:absolute;
+    bottom:50px;
+    width:90%;
+}
+.total-amount h5, .cart-total {
+    margin: 0; 
+    padding: 0;
+    font-size:30px;
+    color:whitesmoke;
+    text-shadow: 0 0 5px black;
+}
+.total-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px; 
+    padding: 15px 20px; 
+    border: 2px solid #960C22;
+    background-color: #C8102E; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    color: white; 
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+.checkout-btn {
+    width: 100%;
+    margin-top: 2rem;
+    background-color: green; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    padding: 15px 20px; 
+    font-size: 18px; 
+    transition: background-color 0.3s; 
+    box-shadow:0 0 10px green;
+}
+
+.checkout-btn:hover {
+    background-color: darkgreen;
+    box-shadow:0 0 10px green;
+}
+
+#cart-icon {
+    cursor: pointer;
+    color: #fff; 
+    transition: color 0.3s ease-in-out;
+    animation: pop-in 1s ease forwards;
+    opacity: 0;
+}
+
+#cart-icon:hover {
+    color: rgba(255, 255, 255, 0.664); /* Gold color on hover */
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fa-solid.fa-plus:hover {
+    color: #f2c641; 
+}
+
+/*Social Media Styling*/
+.info{
+    background-color: #C8102E;
+    padding:25px 60px;
+    box-shadow: 0px 0px 10px black;
+}
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-youtube {
+    color: red;
+}
+.fa-instagram{
+    color:white;
+}
+.info {
+    position: relative;
+}
+
+.icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding:75px 150px;
+    font-size: 30px;
+}
+
+.icons a {
+    margin-right:5px;
+    text-decoration:none;
+}
+
+/*Ordering Button*/
+.button {
+    margin: 10px auto; 
+    padding: 30px 60px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #8B0000; 
+    background-image: linear-gradient(45deg, #8B0000 0%, #B22222  51%, #8B0000  100%); 
+    cursor: pointer;
+    touch-action: manipulation;
+    font-size:20px;
+}
+
+.button:hover {
+    background-position: center;
+    color: whitesmoke;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+.order{
+    background-image: url("../Images/wallpaper.jpg");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-position:center;
+        background-size:cover;
+        margin:0;
+        box-shadow: 0px 0px 10px black;
+        padding: 150px; 
+}
+
+/*Wesbite Resizing*/ 
+@media screen and (max-width: 1200px) {
+    
+    body {
+        font-size: 14px;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .quantity-control {
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .quantity-input {
+        width: 40px;
+        height: 20px;
+        padding: 3px 6px;
+    }
+    .sidebar {
+        width: 100px; 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        font-size: 12px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .quantity-control {
+        font-size: 12px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+    }
+
+    .quantity-input {
+        width: 30px;
+        height: 16px;
+        padding: 2px 4px;
+    }
+    .sidebar {
+        width: 200px; 
+    }
+}

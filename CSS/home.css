@@ -1,0 +1,346 @@
+/*CSS Styling of the Homepage*/
+
+body {
+    margin: 0;
+    font-family: "Fjalla One", sans-serif;
+    padding:0;
+    background-color:#1B1C1D;
+}
+
+.header{
+    color: whitesmoke;
+    text-align: left;
+    box-shadow: 0px 0px 10px black;
+    text-shadow: 0px 5px 5px black;
+    position: relative;
+}
+.header img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px; 
+    height: auto;
+    padding:20px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+    background-color:#C8102E;
+    padding: 20px;
+}
+
+.navigation ul {
+    margin: 0;
+    text-align: left;
+    padding: 0;
+    background-color: #960C22;
+}
+
+.navigation ul li {
+    display: inline;
+    margin: 0;
+}
+
+.navigation ul li a {
+    font-size: 20px;
+    transition: color .5s;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 0;
+}
+
+.navigation ul li a:hover {
+    color: rgba(255, 255, 255, 0.664);
+}
+
+.navigation ul li.active a {
+    color: #f2c641;
+}
+
+/*Welcome Section Styling*/
+.welcome{
+    padding:50px;
+}
+.welcome img{
+    margin: 50px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;  
+    float: left;
+    box-shadow: 0px 0px 10px black; 
+}
+.description{
+    text-align: center;
+    padding: 150px; 
+    text-shadow: 0px 5px 5px black;
+    
+}
+.description p{
+    color:whitesmoke;
+    font-size: 25px;
+    
+}
+.description h2{
+    margin: 0px;
+    font-size: 90px;
+    color: red;
+
+}
+
+
+/*Slideshow Animation and Styling*/
+.gallery{
+    background-image: url("../Images/wallpaper.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size:cover;
+    margin:0;
+    box-shadow: 0px 0px 10px black;
+    padding: 150px;
+}
+.gallery h2{
+    font-size: 70px;
+    color: #e81313;
+    text-align:center;
+    text-shadow: 0px 5px 5px black;
+    
+}
+
+.slider{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+  
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    animation: slide 40s linear infinite;
+    box-shadow: 0px 0px 10px black;
+}
+  
+  @keyframes slide{
+    0%, 7%, 100%{
+        opacity: 0; 
+    }
+    3.5%, 6%{
+        opacity: 1;
+    } 
+  }
+  
+.slide:nth-child(1){
+    animation-delay: 0s;
+}
+.slide:nth-child(2){
+    animation-delay: 3.64s;
+} 
+.slide:nth-child(3){
+     animation-delay: 7.27s;
+}
+.slide:nth-child(4){
+    animation-delay: 10.91s;
+}
+.slide:nth-child(5){
+    animation-delay: 14.55s;
+}
+.slide:nth-child(6){
+    animation-delay: 18.18s;
+    }
+.slide:nth-child(7){
+    animation-delay: 21.82s;
+}
+.slide:nth-child(8){
+    animation-delay: 25.45s;
+}
+.slide:nth-child(9){
+    animation-delay: 29.09s;
+}
+.slide:nth-child(10){
+    animation-delay: 32.73s;
+}
+.slide:nth-child(11){
+    animation-delay: 36.36s;
+}
+
+/*Cafeteria Info Section Styling*/
+.visit{
+    padding:75px;
+}
+.description2{
+    padding:40px;
+    text-shadow: 0px 5px 5px black;
+}
+.description2 h2{
+    font-size:70px;
+    color:red;
+
+}
+.description2 h3{
+    color:whitesmoke;
+    font-size:30px;
+}
+.description2 li{
+    color:lightgrey;
+    font-size:20px
+
+}
+.visit img {
+    float: right;
+    margin: 85px 40px 40px;
+    width: 800px;
+    padding: 0px;
+    height: auto;  
+    box-shadow: 0px 0px 10px black; 
+}
+
+/*Newsletter Styling*/
+.newsletter {
+    text-align: center;
+    background-image: url("../Images/wallpaper.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size:cover;
+    margin:0;
+    box-shadow: 0px 0px 10px black;
+    padding:100px
+  }
+  
+  .newsletter h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color:whitesmoke;
+    text-shadow: 0px 5px 5px black;
+
+  }
+  
+  .newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .newsletter p{
+    text-shadow: 0px 5px 5px black;
+    color:white;
+  }
+  
+  .newsletter button {
+    padding: 10px 20px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .newsletter button:hover {
+    background-color: tomato;
+  }
+
+
+/*Social Media Styling*/
+.info{
+    background-color: #C8102E;
+    padding:25px 60px;
+    box-shadow: 0px 0px 10px black;
+}
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-youtube {
+    color: red;
+}
+.fa-instagram{
+    color:white;
+}
+.info {
+    position: relative;
+}
+
+.icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding:75px 150px;
+    font-size: 30px;
+}
+
+.icons a {
+    margin-right:5px;
+    text-decoration:none;
+}
+
+
+/*Footer Styling*/
+.footer {
+    background-color: #333;
+    color: whitesmoke;
+    padding: 15px 65px;
+    box-shadow: 0px 0px 10px black;
+}
+
+/*Wesbite Resizing*/ 
+@media screen and (max-width: 768px) {
+   
+    .header h1 {
+        font-size: 24px;
+    }
+
+   
+    .navigation ul li a {
+        font-size: 16px;
+    }
+
+   
+    .welcome {
+        padding: 20px;
+    }
+
+   
+    .welcome img {
+        margin: 20px;
+    }
+
+    
+    .description p {
+        font-size: 18px;
+    }
+
+    
+    .description h2 {
+        font-size: 60px;
+    }
+
+   
+    .gallery {
+        padding: 50px;
+    }
+
+   
+    .gallery h2 {
+        font-size: 50px;
+    }
+
+    
+    .slider {
+        height: 300px;
+    }
+
+}
