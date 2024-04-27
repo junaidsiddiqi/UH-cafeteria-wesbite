@@ -1,3 +1,5 @@
+/*CSS Styling of the Location Page*/
+
 body {
     margin: 0;
     font-family: "Fjalla One", sans-serif;
@@ -63,4 +65,155 @@ h2{
     color: #e81313;
     text-align:center;
     text-shadow: 0px 5px 5px black;
+}
+
+/*Map Styling*/
+.box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow:0px 0px 10px red;
+    color: white;
+}
+
+.map img {
+    width: 600px;
+    height: auto;
+    box-shadow: 0px 0px 10px white;
+    transition: transform .5s ease-in-out;
+    border-radius: 5px;
+}
+
+.map img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px white;
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom:100px;
+}
+
+.map-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.map {
+    margin-left: 40px;
+}
+
+.box {
+    background-color: #C8102E;
+    padding: 25px;
+    box-shadow: 0px 0px 20px red;
+    text-align: left;
+    margin-right: 40px;
+    border-radius: 10px;
+    width: 370px;
+}
+
+.box p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 10px black;
+    color:white;
+}
+
+/*Social Media Styling*/
+.info{
+    background-color: #C8102E;
+    padding:25px 60px;
+    box-shadow: 0px 0px 10px black;
+}
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-youtube {
+    color: red;
+}
+.fa-instagram{
+    color:white;
+}
+.info {
+    position: relative;
+}
+
+.icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding:75px 150px;
+    font-size: 30px;
+    transition: transform 2s ease-in-out;
+}
+
+.icons a {
+    margin-right:5px;
+    text-decoration:none;
+}
+.fa-twitter:hover,.fa-instagram:hover,.fa-youtube:hover{
+    transform: scale(1.20);
+}
+
+
+/*Wesbite Resizing*/ 
+@media screen and (max-width: 1200px) {
+    
+    body {
+        font-size: 14px;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .quantity-control {
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .quantity-input {
+        width: 40px;
+        height: 20px;
+        padding: 3px 6px;
+    }
+    .sidebar {
+        width: 100px; 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        font-size: 12px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .quantity-control {
+        font-size: 12px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+    }
+
+    .quantity-input {
+        width: 30px;
+        height: 16px;
+        padding: 2px 4px;
+    }
+    .sidebar {
+        width: 200px; 
+    }
 }

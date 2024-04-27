@@ -1,3 +1,5 @@
+/*CSS Styling of the Contact Page*/
+
 body {
     margin: 0;
     font-family: "Fjalla One", sans-serif;
@@ -62,4 +64,42 @@ h2{
     color: #e81313;
     text-align:center;
     text-shadow: 0px 5px 5px black;
+}
+
+
+/*Social Media Styling*/
+.info{
+    background-color: #C8102E;
+    padding:25px 60px;
+    box-shadow: 0px 0px 10px black;
+}
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-youtube {
+    color: red;
+}
+.fa-instagram{
+    color:white;
+}
+.info {
+    position: relative;
+}
+
+.icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding:75px 150px;
+    font-size: 30px;
+    transition: transform 2s ease-in-out;
+}
+
+.icons a {
+    margin-right:5px;
+    text-decoration:none;
+}
+.fa-twitter:hover,.fa-instagram:hover,.fa-youtube:hover{
+    transform: scale(1.20);
 }

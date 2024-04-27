@@ -280,13 +280,16 @@ body {
     right: 20px;
     padding:75px 150px;
     font-size: 30px;
+    transition: transform 2s ease-in-out;
 }
 
 .icons a {
     margin-right:5px;
     text-decoration:none;
 }
-
+.fa-twitter:hover,.fa-instagram:hover,.fa-youtube:hover{
+    transform: scale(1.20);
+}
 
 /*Footer Styling*/
 .footer {
