@@ -65,8 +65,110 @@ h2{
     text-shadow: 0px 5px 5px black;
 }
 
+/*About Us Info*/
+.info-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
 
+.info-box {
+    background-color: #2C2D2E;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    height: 800px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+     
+}
 
+.info-box h3 {
+    font-size: 40px; 
+    color: #e81313;
+    margin-top: 0;
+}
+
+.info-box p {
+    font-size: 32px !important; 
+}
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 50px;
+    color: #e81313;
+    text-shadow: 0px 0px 10px black;
+}
+
+.container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.container h3 {
+    font-size: 30px;
+    color: #e81313;
+    margin-top: 50px;
+    font-size:40px;
+    text-shadow: 0px 0px 10px black;
+
+}
+
+.testimonials-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.testimonials {
+    display: inline-flex;
+    padding-bottom: 5px; 
+}
+
+.testimonial {
+    background-color: #C8102E;
+    color: #fff;
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px; 
+    flex-shrink: 0;
+    overflow: hidden; 
+    overflow-wrap: break-word;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.testimonial p {
+    margin: 0;
+    font-size:25px;
+    text-shadow:0 0 10px black;
+}
+
+.testimonials-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.testimonials-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.testimonials-container::-webkit-scrollbar-thumb {
+    background: #C8102E; 
+    border-radius: 5px;
+}
+
+.testimonials-container::-webkit-scrollbar-thumb:hover {
+    background: #960C22;
+}
 
 /*Social Media Styling*/
 .info{
