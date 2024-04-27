@@ -3,30 +3,32 @@
 body {
     margin: 0;
     font-family: "Fjalla One", sans-serif;
-    padding:0;
-    background-color:#1B1C1D;
+    padding: 0;
+    background-color: #1B1C1D;
 }
 
-.header{
+.header {
     color: whitesmoke;
     text-align: left;
     box-shadow: 0px 0px 10px black;
     text-shadow: 0px 5px 5px black;
     position: relative;
 }
-.header img{
+
+.header img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 40px; 
+    width: 40px;
     height: auto;
-    padding:20px;
+    padding: 20px;
 }
+
 .header h1 {
     margin: 0;
     font-size: 30px;
     padding: 20px;
-    background-color:#C8102E;
+    background-color: #C8102E;
 }
 
 .navigation ul {
@@ -59,14 +61,131 @@ body {
     color: #f2c641;
 }
 
-h2{
+h2 {
     font-size: 50px;
     color: #e81313;
-    text-align:center;
+    text-align: center;
     text-shadow: 0px 5px 5px black;
 }
 
+/*Contact Us Styling*/ 
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
 
+.container h2 {
+    font-size: 40px;
+    color: #e81313;
+    text-shadow: 0px 0px 10px black;
+    margin-bottom: 30px;
+}
+
+.container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-shadow:0 0 10px black;
+}
+
+.container h3 {
+    font-size: 30px;
+    color: #e81313;
+    margin-top: 50px;
+    text-shadow: 0px 0px 10px black;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-form {
+    background-color: #2C2D2E;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width:500px;
+    padding:10px;
+    text-shadow:0 0 10px red;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group textarea {
+    width: 400px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 4px solid #ccc;
+    background-color: #fff;
+    resize: none;
+    text-shadow:0 0 10px black;
+}
+
+.input-group textarea {
+    height: 150px;
+}
+
+.button-group {
+    text-align: center;
+}
+
+.button-group button {
+    font-size: 18px;
+    background-color:#C8102E ;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow:0 0 10px red;
+}
+
+.button-group button:hover {
+    background-color: #960C22;
+    box-shadow: 0px 0px px red;
+}
+
+.contact-info {
+    background-color: #C8102E;
+    padding: 50px;
+    box-shadow: 0px 0px 20px red;
+    text-align: left;
+    border-radius: 10px;
+    margin: 0 auto;
+    height:300px;
+    margin-left:100px;
+    margin-top:100px;
+    width:300px;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+    color: #e81313;
+    margin-top: 0;
+    text-shadow: 0px 0px 10px red;
+    color: white;
+}
+
+.contact-info p {
+    font-size: 20px;
+    margin: 20px 0;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+}
 /*Social Media Styling*/
 .info{
     background-color: #C8102E;

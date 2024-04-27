@@ -67,7 +67,7 @@ h2{
     text-shadow: 0px 5px 5px black;
 }
 
-/*Map Styling*/
+/*Location Styling*/
 .box h3 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -159,61 +159,4 @@ h2{
 }
 .fa-twitter:hover,.fa-instagram:hover,.fa-youtube:hover{
     transform: scale(1.20);
-}
-
-
-/*Wesbite Resizing*/ 
-@media screen and (max-width: 1200px) {
-    
-    body {
-        font-size: 14px;
-    }
-
-    .box {
-        width: 90%;
-    }
-
-    .quantity-control {
-        font-size: 14px;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-    }
-
-    .quantity-input {
-        width: 40px;
-        height: 20px;
-        padding: 3px 6px;
-    }
-    .sidebar {
-        width: 100px; 
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    
-    body {
-        font-size: 12px;
-    }
-
-    .box {
-        width: 100%;
-    }
-
-    .quantity-control {
-        font-size: 12px;
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
-    }
-
-    .quantity-input {
-        width: 30px;
-        height: 16px;
-        padding: 2px 4px;
-    }
-    .sidebar {
-        width: 200px; 
-    }
 }
