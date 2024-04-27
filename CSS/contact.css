@@ -131,7 +131,7 @@ h2 {
     border: 4px solid #ccc;
     background-color: #fff;
     resize: none;
-    text-shadow:0 0 10px black;
+    font-family: sans-serif;
 }
 
 .input-group textarea {
