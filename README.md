@@ -1,4 +1,29 @@
-1.This assignment is graded.
-2.please follow the instructions file posted on canvas
-3.Upload your work to canvas and push all your files to your repository.
-4.clone this repository and start working on the Assignmnet-4&5
+This project utilizes Node.js with Express to manage the backend functionalities.
+
+Key Features:
+
+Handles both POST and GET requests.
+Utilizes middleware for calculating the total amount.
+Presents the total amount on a dedicated order confirmation page.
+Usage:
+
+Open the project in VSCode for optimal development experience.
+Navigate to the backend directory in VSCode using the command:
+bash
+
+cd backend
+Install any required dependencies by executing:
+
+npm install
+Or install individual dependencies:
+
+npm install express
+npm install cors
+
+To start the backend server, run:
+
+node server.js
+
+Access any HTML file in the "HTML File" folder located within the frontend directory.
+
+Add desired items to the shopping cart. When ready, click on the button highlighted in green. This action will direct you to the order confirmation page.

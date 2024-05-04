@@ -1,19 +1,18 @@
 const express = require('express');
+const session = require('express-session');
 const bodyParser = require('body-parser');
+
 const app = express();
 const port = 3000;
 
-// Set up body parser middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// Set the view engine to EJS
-app.set('view engine', 'ejs');
-
-// Define routes
-app.get('/', (req, res) => {
-    // Render your menu page here
-    res.render('menu');
-});
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}));
 
 // POST request handler for order submission
 app.post('/order', (req, res) => {
@@ -21,8 +20,35 @@ app.post('/order', (req, res) => {
     const { item1, item2, item3 } = req.body;
     const totalAmount = calculateTotal(item1, item2, item3);
 
-    // Render order confirmation page and pass total amount
-    res.render('order_confirmation', { totalAmount });
+    // Retrieve cart items from localStorage
+    const cartItems = req.session.cartItems || [];
+
+    // Food items and their prices
+    const foodItems = {
+        Pancakes: 5,
+        Waffles: 5,
+        'Breakfast Burrito': 8,
+        Oatmeal: 7,
+        Burger: 12,
+        Salad: 8,
+        Pizza: 15,
+        Sandwich: 10,
+        Pasta: 20,
+        Steak: 25,
+        Lasagna: 14,
+        Salmon: 20,
+        Chips: 2,
+        Candy: 3,
+        Cookies: 5,
+        'Fruit Bowl': 8,
+        Water: 2,
+        Tea: 4,
+        Soda: 2,
+        'Energy Drink': 2
+    };
+
+    // Render order confirmation page and pass cart items, total amount, and food items
+    res.render('order_confirmation', { cartItems, totalAmount, foodItems });
 });
 
 // Function to calculate total amount

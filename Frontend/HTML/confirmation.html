@@ -3,12 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/confirmation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ee9036e1c6.js" crossorigin="anonymous"></script>
     <title>Order Confirmation</title>
 </head>
 <body>
-    <h1>Order Confirmation</h1>
-    <p>Thank you for your order! Your order details are as follows:</p>
-    <!-- Display order details here -->
-    <div id="orderDetails"></div>
+
+    <div class="header">
+        <h1>CougBite Cafe</h1>
+        <img src="../Images/logo.png">
+        <div class="navigation">
+            <ul>
+                <li><a href="../HTML/home.html">Home</a></li>
+                <li class="active"><a href="../HTML/menu.html">Menu</a></li>
+                <li><a href="../HTML/location.html">Location & Hours</a></li>
+                <li><a href="../HTML/about.html">About Us</a></li>
+                <li><a href="../HTML/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <h2>Order Confirmation</h2>
+    </div>
+
+    <h2>Thank you for your order! Your order details are as follows:</h2>
+
+    <div id="orderSummary"></div>
+    <div id="totalAmount"></div>
+
+    <!-- Include the confirmation.js script -->
+    <script src="confirmation.js"></script>
 </body>
 </html>

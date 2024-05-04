@@ -28,23 +28,59 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartIcon = document.getElementById('cart-icon');
 
     let totalPrice = 0;
+    let cartItems = [];
 
     function addItemToCart(itemName, itemPrice, quantity) {
-        const cartItem = document.createElement('div');
-        cartItem.classList.add('cart-item');
-        cartItem.innerHTML = `
-            <span>${quantity}x ${itemName}</span>
-            <span class="cart-item-price">$${(itemPrice * quantity).toFixed(2)}</span>
-            <i class="fas fa-times remove-item"></i>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-        totalPrice += itemPrice * quantity;
-        cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
-        const removeIcon = cartItem.querySelector('.remove-item');
-        removeIcon.addEventListener('click', () => {
-            removeItemFromCart(itemPrice * quantity);
-            cartItemsContainer.removeChild(cartItem);
+        // Check if the item is already in the cart
+        const existingItem = cartItems.find(item => item.name === itemName);
+        if (existingItem) {
+            // Check if adding the new quantity exceeds the limit of 10
+            if (existingItem.quantity + quantity <= 10) {
+                existingItem.quantity += quantity;
+            } else {
+                // If exceeding, set the quantity to the maximum limit of 10
+                existingItem.quantity = 10;
+            }
+        } else {
+            // If not in the cart, add a new item
+            cartItems.push({ name: itemName, price: itemPrice, quantity: Math.min(quantity, 10) });
+        }
+
+        // Render cart items
+        renderCartItems();
+    }
+
+    function renderCartItems() {
+        // Clear previous items
+        cartItemsContainer.innerHTML = '';
+        totalPrice = 0;
+
+        // Render new items
+        cartItems.forEach(item => {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <span>${item.quantity}x ${item.name}</span>
+                <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</span>
+                <i class="fas fa-times remove-item"></i>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+            totalPrice += item.price * item.quantity;
         });
+
+        // Update total price
+        cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
+    }
+
+    function removeItemFromCart(itemName, itemPrice, quantity) {
+        // Remove the item from the cartItems array
+        const index = cartItems.findIndex(item => item.name === itemName);
+        if (index !== -1) {
+            cartItems.splice(index, 1);
+        }
+
+        // Re-render cart items
+        renderCartItems();
     }
 
     addToCartIcons.forEach(icon => {
@@ -73,14 +109,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to remove item from cart
-    function removeItemFromCart(itemPrice) {
-        totalPrice -= itemPrice;
-        cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
+    function removeItemFromCart(itemName, itemPrice, quantity) {
+        // Remove the item from the cartItems array
+        const index = cartItems.findIndex(item => item.name === itemName);
+        if (index !== -1) {
+            cartItems.splice(index, 1);
+        }
+
+        // Re-render cart items
+        renderCartItems();
     }
 
     // Event listener for clicking the cart icon
     cartIcon.addEventListener('click', function() {
-        
         if (cartSidebar.classList.contains('open')) {
             closeCart(); 
         } else {
@@ -108,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // If the user confirms, redirect to confirmation page
         if (confirmationMessage) {
-            window.location.href = '../confirmation.html';
+            window.location.href = 'confirmation.html';
         }
     }
 
