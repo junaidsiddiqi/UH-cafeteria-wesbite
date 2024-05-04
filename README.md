@@ -18,6 +18,7 @@ Install any required dependencies by executing:
 Or install individual dependencies:
 
 > npm install express
+
 > npm install cors
 
 To start the backend server, run:

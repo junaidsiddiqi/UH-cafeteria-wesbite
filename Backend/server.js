@@ -51,11 +51,6 @@ app.post('/order', (req, res) => {
     res.render('order_confirmation', { cartItems, totalAmount, foodItems });
 });
 
-// Function to calculate total amount
-function calculateTotal(item1, item2, item3) {
-    // Your calculation logic here
-    // Example: return parseFloat(item1) + parseFloat(item2) + parseFloat(item3);
-}
 
 // Start the server
 app.listen(port, () => {
