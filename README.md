@@ -9,20 +9,20 @@ Usage:
 
 Open the project in VSCode for optimal development experience.
 Navigate to the backend directory in VSCode using the command:
-bash
-
 cd backend
+
 Install any required dependencies by executing:
 
-npm install
+> npm install
+
 Or install individual dependencies:
 
-npm install express
-npm install cors
+> npm install express
+> npm install cors
 
 To start the backend server, run:
 
-node server.js
+> node server.js
 
 Access any HTML file in the "HTML File" folder located within the frontend directory.
 
