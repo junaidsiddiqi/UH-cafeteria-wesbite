@@ -1,9 +1,11 @@
-**Project Description**
+**UH Cafeteria Website Project**
+
+**Project Description*
 
 Created a webpage for the University of Houston's Cafeteria using HTML, CSS, Javascript, while also utilizing Node.js with Express to manage the backend functionalities.
 
 
-Key Features:
+**Key Features:*
 
 Handles both POST and GET requests.
 Utilizes middleware for calculating the total amount.
